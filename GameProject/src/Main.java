@@ -14,14 +14,21 @@ public class Main {
 		player.setYearOfBirth(LocalDate.of(1998, 07, 17));
 		player.setNationalityId("17201158454");
 
+		Player player2 = new Player();
+		player2.setId(2);
+		player2.setFirstName("Mehmet");
+		player2.setLastName("Þimþek");
+		player2.setYearOfBirth(LocalDate.of(1998, 07, 17));
+		player2.setNationalityId("11111111111");
 		PlayerManager playerManager = new PlayerManager(new MerniseServiceAdapter());
-		playerManager.add(player);
+		playerManager.add(player2);
 
 		System.out.println("-----Oyuncu Listesi-----");
 		List<Player> list = new ArrayList<Player>();
 		list.add(player);
-		for (Player player2 : list) {
-			System.out.println(player2.getFirstName() + " " + player2.getLastName());
+		list.add(player2);
+		for (Player player3 : list) {
+			System.out.println(player3.getFirstName() + " " + player3.getLastName());
 
 		}
 		System.out.println("-------------------------");
